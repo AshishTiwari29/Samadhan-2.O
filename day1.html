@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Student Details</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 16px; }
+        pre { background:#f7f7f7; padding:12px; border-radius:6px; }
+    </style>
+</head>
+<body>
+    <h1>Student Details</h1>
+    <pre id="output">Loading...</pre>
+
+    <script>
+        const student = {
+            name: "Cyber Shadows",
+            member: "3",
+            roll: "0187cy241000",
+            semester : "3rd",
+            Collage : "Sagar Institute of Science and Technology"
+        };
+
+        function formatStudent(s) {
+            return [
+                `Name: ${s.name}`,
+                `Member: ${s.member}`,
+                `Roll: ${s.roll}`,
+                `Semester: ${s.semester}`,
+                `Collage: ${s.Collage}`
+            ].join('\n');
+        }
+
+        
+
+        document.getElementById('output').textContent = formatStudent(student);
+
+
+        console.log(formatStudent(student));
+        console.table([student]);
+    </script>
+</body>
+</html>
